@@ -1,0 +1,97 @@
+h1 {
+	text-align: center;
+}
+
+input {
+	display: flex;
+	/* align-self: center; */
+	border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	height: 20px;
+	width: 100%;
+}
+
+.form {
+	margin: auto;
+	text-align: center;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	/* gap: 1em; */
+	gap: 10px;
+}
+
+.label {
+	text-align: left;
+	display: block; /* Размещаем метки вертикально */
+	margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+}
+
+.todo-list {
+	max-width: 600px;
+	margin: auto;
+	padding: 20px;
+	text-align: left;
+}
+
+.todo-list ul {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.todo-list li {
+	padding: 10px;
+	/* border-bottom: 1px solid #ccc; */
+	border-bottom: 2px solid
+		hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+}
+
+.completed {
+	text-decoration: line-through;
+	color: gray;
+}
+
+/* Стили для лоадера */
+.loader {
+	border: 8px solid #f3f3f3;
+	border-top: 8px solid #3498db;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+	margin: 20px auto;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+button {
+	/* align-self: center;*/
+	margin-left: 5px;
+	margin-right: 5px;
+	/* padding: 0.5em 0.75em; */
+	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	/* font-size: 18px; */
+	transition: background-color 0.15s ease;
+	border: none;
+	/* border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%); */
+}
+
+button:hover {
+	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
+}
+
+button:focus {
+	/* background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%); */
+	outline: none;
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+
+button:disabled {
+	background-color: var(--disabled-color);
+}
